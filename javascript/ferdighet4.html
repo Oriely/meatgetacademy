@@ -18,25 +18,10 @@
 
         }
     </style>
-    <script>
-        function rannum(){
-            return Math.floor(Math.random() * 10);
-        } 
-        var passcode = rannum().toString() + rannum().toString() + rannum().toString() + rannum().toString();
 
-
-        document.getElementById("passcode").addEventListener("change", console.log("help"))
-        
-        
-        function inputNum() {
-
-        }
-
-        console.log(passcode);
-    </script>
 </head>
 <body>
-    <input id="passcode" type="text">
+    <input id="something" type="text" value="333">
     <br>
     <button >1</button>
     <button>2</button>
@@ -51,5 +36,22 @@
     <button>9</button>
     <br>
     <button>10</button>
+    <script>
+        // create random number 0-10
+        function rannum(){
+            return Math.floor(Math.random() * 10);
+        } 
+        // make 4 integers into string and combine into 4 digit code
+        var passcode = rannum().toString() + rannum().toString() + rannum().toString() + rannum().toString();
+        console.log(passcode);
+
+        var ps = document.getElementById("something");
+        ps.addEventListener("change", console.log("trol"));
+        
+        function inputNumber(input) {
+            var passcodeArea = document.getElementById("something")
+            
+        }   
+    </script>
 </body>
 </html>
