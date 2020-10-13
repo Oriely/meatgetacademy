@@ -1,83 +1,53 @@
-Skip to content
-Why GitHub? 
-Team
-Enterprise
-Explore 
-Marketplace
-Pricing 
-Search
-
-Sign in
-Sign up
-GetAcademy
-/
-StartIT
-209
-Code
-Issues
-Pull requests
-Actions
-Projects
-Security
-Insights
-Join GitHub today
-GitHub is home to over 50 million developers working together to host and review code, manage projects, and build software together.
-
-StartIT/Grunnferdigheter/Ferdighet 02a - Alternative eventhandlere.html
-@terjekol
-terjekol dsds
-…
-Latest commit 25c34c6 on 28 Feb 2018
- History
- 1 contributor
-37 lines (31 sloc)  1.15 KB
-  
 ﻿<!DOCTYPE html>
 
 <html lang="en" xmlns="http://www.w3.org/1999/xhtml">
 <head>
     <meta charset="utf-8" />
     <title></title>
+    <style>
+        #testing {
+            background: green;
+            width: 200px;
+            height: 200px;
+        }
+    </style>
 </head>
 <body onload="testOnLoad()">
     <p>Ferdighet 2a - Alternative eventhandlere: onchange osv.</p>
     <input type="text" onchange="testOnChange()" oninput="testOnInput()" />
     <h3 onmouseover="testOnMouseOver()" onmouseout="testOnMouseOut()">Test test test</h3>
     <h2 id="info"></h2>
+    <div id="testing">
 
+    </div>
     <a href="https://www.w3schools.com/jsref/dom_obj_event.asp">Mer informasjon her</a>
     <script>
+        var box = document.getElementById("testing");
+
         function testOnLoad() {
             console.log("onload test");
+            box.setAttribute("style", "border-radius: 10px")
         }
 
         function testOnChange() {
             console.log("onchange test");
+            box.setAttribute("style", "border-radius: 26px")
         }
 
         function testOnInput() {
             console.log("oninput test");
+            box.setAttribute("style", "border-radius: 30px")
         }
 
         function testOnMouseOver() {
             console.log("onmouseover test");
+            box.setAttribute("style", "border-radius: 13px")
         }
 
         function testOnMouseOut() {
             console.log("onmouseout test");
+            box.setAttribute("style", "border-radius: 18px")
         }
     </script>
 </body>
 </html>
-© 2020 GitHub, Inc.
-Terms
-Privacy
-Security
-Status
-Help
-Contact GitHub
-Pricing
-API
-Training
-Blog
-About
