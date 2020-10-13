@@ -15,25 +15,25 @@
             margin:10px;
             height:50px;
             width:190px;
-
+            font-size:45px;
         }
     </style>
 
 </head>
 <body>
-    <input id="something" type="text" value="333">
+    <input id="inputField" type="text" value="" alt="0000">
     <br>
-    <button>1</button>
-    <button>2</button>
-    <button>3</button>
+    <button onclick="inputNumber(this)">1</button>
+    <button onclick="inputNumber(this)">2</button>
+    <button onclick="inputNumber(this)">3</button>
     <br>
-    <button>4</button>
-    <button>5</button>
-    <button>6</button>
+    <button onclick="inputNumber(this)">4</button>
+    <button onclick="inputNumber(this)">5</button>
+    <button onclick="inputNumber(this)">6</button>
     <br>
-    <button>7</button>
-    <button>8</button>
-    <button>9</button>
+    <button onclick="inputNumber(this)">7</button>
+    <button onclick="inputNumber(this)">8</button>
+    <button onclick="inputNumber(this)">9</button>
     <br>
     <button>0</button>
     <script>
@@ -46,11 +46,19 @@
         var passcode = rannum().toString() + rannum().toString() + rannum().toString() + rannum().toString();
         console.log(passcode);
 
-        var buttons = document.querySelectorAll("button");
+        function inputNumber(button) {
+            var number = button.innerHTML;
+            var inputField = document.getElementById("inputField");
+            console.log(number);
+            inputField.value += number;
+            var inputFieldAfter = inputField.value;
+            if(inputFieldAfter.length(4)) {
+                console.log("nice");
+            
+            }
+        }
 
-        console.log(buttons);
-
-        console.log.(buttonvalue)
+        
 
     </script>
 </body>
