@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+       #grid {
+        background:green;
+        display:grid;
+        grid-template-columns:33.3333333% 33.3333333333333% 33.33333333%;
+        grid-template-rows: 20% 20% 20% 20% 20%;
+        width:400px;
+        height:667px;
+
+       } 
+       .square {
+           background:red;
+           padding:10px;
+       }
+       #input {
+           grid-column-start:1;
+           grid-column-end:4;
+       }
+       button {
+           font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+           width:100%;
+           height:100%;
+           font-size:60px;
+       }
+
+       .square:nth-child(11){
+           
+       }
+       input {
+           width:100%;
+           height:100%;
+           margin:0;
+           padding:0;
+           border:0;
+           font-size:80px;
+       }
+    </style>
+</head>
+<body>
+    <div id="grid">
+        <div id="input" class="square"><input type="text"></div>
+        <div class="square"><button>1</button></div>
+        <div class="square"><button>2</button></div>
+        <div class="square"><button>3</button></div>
+        <div class="square"><button>4</button></div>
+        <div class="square"><button>5</button></div>
+        <div class="square"><button>6</button></div>
+        <div class="square"><button>7</button></div>
+        <div class="square"><button>8</button></div>
+        <div class="square"><button>9</button></div>
+        <div class="square"><button>*</button></div>
+        <div class="square"><button>9</button></div>
+        <div class="square"><button>#</button></div>
+    </div>
+</body>
+</html>

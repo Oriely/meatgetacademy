@@ -52,14 +52,22 @@
             console.log(number);
             inputField.value += number;
             var inputFieldAfter = inputField.value;
-            if(inputFieldAfter.length(4)) {
+            if(inputFieldAfter.length == 4) {
                 console.log("nice");
-            
             }
         }
+        document.getElementById("inputField").addEventListener("change", function(){
+            var inputFieldd = document.getElementById("inputField");
+            if(inputFieldd.value.length == 4) {
+                console.log("dsdf");
+                if (inputFieldd.value == passcode) {
+                    console.log("Correct");
+                } else {
+                    console.log("wrong");
+                }
+            }
+        });
 
-        
-        toergpoerpogkerpg
     </script>
 </body>
 </html>
