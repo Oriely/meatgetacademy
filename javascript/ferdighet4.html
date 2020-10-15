@@ -24,7 +24,7 @@
 
 </head>
 <body>
-    <div>
+    <div id="container">
         <input id="inputField" type="text" value="" alt="0000">
         <br>
         <button onclick="inputNumber(this)">1</button>
@@ -40,7 +40,7 @@
         <button onclick="inputNumber(this)">9</button>
         <br>
         <button onclick="inputNumber(this)">0</button>
-        <button id="clear" onclick="clear()">Clear</button>
+        <button id="clear" onclick="clear1()">Clear</button>
         <h1 id="response"></h1>
     </div>
     <script>
@@ -54,6 +54,7 @@
         console.log(passcode);
 
         function inputNumber(button) {
+            var container = document.getElementById("container"); 
             var number = button.innerHTML;
             var inputField = document.getElementById("inputField");
             var response = document.getElementById("response");
@@ -67,18 +68,19 @@
                 // check if code in inputField is equal to randomized passcode
                 if (inputField.value == passcode) {
                     
-                    response.innerHTML = "Access Granted"
-                    docume
+                    response.innerHTML = "Access Granted";
+                    container.innerHTML += "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dolorum minus possimus unde, similique nostrum quis recusandae maiores! Provident nisi fugiat ad distinctio, neque, qui nostrum ipsum illo aspernatur eius cumque.";
                 } else {
 
-                    response.innerHTML = "Access Granted"
+                    response.innerHTML = "Access Granted";
                 }
             }
         }
         
-        function clear() {
-            
-            console.log("wfadf")
+        function clear1() {
+            var inputField = document.getElementById("inputField");
+            inputField.value = "";
+            console.log("wfadf");
         }
 
     </script>
