@@ -11,6 +11,9 @@
             font-size:30px;
             margin:10px;
         }
+        #clear  {
+            width:123px;
+        }
         input {
             margin:10px;
             height:50px;
@@ -21,52 +24,62 @@
 
 </head>
 <body>
-    <input id="inputField" type="text" value="" alt="0000">
-    <br>
-    <button onclick="inputNumber(this)">1</button>
-    <button onclick="inputNumber(this)">2</button>
-    <button onclick="inputNumber(this)">3</button>
-    <br>
-    <button onclick="inputNumber(this)">4</button>
-    <button onclick="inputNumber(this)">5</button>
-    <button onclick="inputNumber(this)">6</button>
-    <br>
-    <button onclick="inputNumber(this)">7</button>
-    <button onclick="inputNumber(this)">8</button>
-    <button onclick="inputNumber(this)">9</button>
-    <br>
-    <button>0</button>
+    <div>
+        <input id="inputField" type="text" value="" alt="0000">
+        <br>
+        <button onclick="inputNumber(this)">1</button>
+        <button onclick="inputNumber(this)">2</button>
+        <button onclick="inputNumber(this)">3</button>
+        <br>
+        <button onclick="inputNumber(this)">4</button>
+        <button onclick="inputNumber(this)">5</button>
+        <button onclick="inputNumber(this)">6</button>
+        <br>
+        <button onclick="inputNumber(this)">7</button>
+        <button onclick="inputNumber(this)">8</button>
+        <button onclick="inputNumber(this)">9</button>
+        <br>
+        <button onclick="inputNumber(this)">0</button>
+        <button id="clear" onclick="clear()">Clear</button>
+        <h1 id="response"></h1>
+    </div>
     <script>
         // create random number 0-10
         function rannum(){
             return Math.floor(Math.random() * 10);
         }
 
-        // make 4 integers into string and combine into 4 digit code
+        // rannum function to make 4 randum integers into string and combine into 4 digit string
         var passcode = rannum().toString() + rannum().toString() + rannum().toString() + rannum().toString();
         console.log(passcode);
 
         function inputNumber(button) {
             var number = button.innerHTML;
             var inputField = document.getElementById("inputField");
-            console.log(number);
+            var response = document.getElementById("response");
+
+
             inputField.value += number;
-            var inputFieldAfter = inputField.value;
-            if(inputFieldAfter.length == 4) {
-                console.log("nice");
-            }
-        }
-        document.getElementById("inputField").addEventListener("change", function(){
-            var inputFieldd = document.getElementById("inputField");
-            if(inputFieldd.value.length == 4) {
-                console.log("dsdf");
-                if (inputFieldd.value == passcode) {
-                    console.log("Correct");
+
+            // check if inputField has 4 digits
+            if(inputField.value.length == 4) {
+                
+                // check if code in inputField is equal to randomized passcode
+                if (inputField.value == passcode) {
+                    
+                    response.innerHTML = "Access Granted"
+                    docume
                 } else {
-                    console.log("wrong");
+
+                    response.innerHTML = "Access Granted"
                 }
             }
-        });
+        }
+        
+        function clear() {
+            
+            console.log("wfadf")
+        }
 
     </script>
 </body>
