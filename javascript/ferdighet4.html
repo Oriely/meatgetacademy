@@ -24,7 +24,7 @@
 </head>
 <body>
     <div id="container">
-        <input id="inputField" type="text" value="" alt="0000">
+        <input id="inputField" type="text" value="" placeholder="1234" readonly>
         <br>
         <button onclick="inputNumber(this)">1</button>
         <button onclick="inputNumber(this)">2</button>
@@ -51,6 +51,11 @@
         // rannum function to make 4 randum integers into string and combine into 4 digit string
         var passcode = rannum().toString() + rannum().toString() + rannum().toString() + rannum().toString();
         console.log(passcode);
+
+        function newcode(){
+            passcode = rannum().toString() + rannum().toString() + rannum().toString() + rannum().toString();
+            console.log(passcode);
+        }
 
         function inputNumber(button) {
             var container = document.getElementById("container"); 
