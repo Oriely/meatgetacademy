@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -86,4 +87,98 @@
 
     </script>
 </body>
+=======
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        button {
+            width:50px;
+            height: 50px;
+            font-size:30px;
+            margin:10px;
+        }
+        #clear  {
+            width:123px;
+        }
+        input {
+            margin:10px;
+            height:50px;
+            width:190px;
+            font-size:45px;
+        }
+    </style>
+</head>
+<body>
+    <div id="container">
+        <input id="inputField" type="text" value="" placeholder="1234" readonly>
+        <br>
+        <button onclick="inputNumber(this)">1</button>
+        <button onclick="inputNumber(this)">2</button>
+        <button onclick="inputNumber(this)">3</button>
+        <br>
+        <button onclick="inputNumber(this)">4</button>
+        <button onclick="inputNumber(this)">5</button>
+        <button onclick="inputNumber(this)">6</button>
+        <br>
+        <button onclick="inputNumber(this)">7</button>
+        <button onclick="inputNumber(this)">8</button>
+        <button onclick="inputNumber(this)">9</button>
+        <br>
+        <button onclick="inputNumber(this)">0</button>
+        <button id="clear" onclick="clear1()">Clear</button>
+        <h1 id="response"></h1>
+    </div>
+    <script>
+        // create random number 0-10
+        function rannum(){
+            return Math.floor(Math.random() * 10);
+        }
+
+        // rannum function to make 4 randum integers into string and combine into 4 digit string
+        var passcode = rannum().toString() + rannum().toString() + rannum().toString() + rannum().toString();
+        console.log(passcode);
+
+        function newcode(){
+            passcode = rannum().toString() + rannum().toString() + rannum().toString() + rannum().toString();
+            console.log(passcode);
+        }
+
+        function inputNumber(button) {
+            var container = document.getElementById("container"); 
+            var number = button.innerHTML;
+            var inputField = document.getElementById("inputField");
+            var response = document.getElementById("response");
+
+
+            inputField.value += number;
+
+            // check if inputField has 4 digits
+            if(inputField.value.length == 4) {
+                
+                // check if code in inputField is equal to randomized passcode
+                if (inputField.value == passcode) {
+                    
+                    response.innerHTML = "Access Granted";
+                    container.innerHTML += "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dolorum minus possimus unde, similique nostrum quis recusandae maiores! Provident nisi fugiat ad distinctio, neque, qui nostrum ipsum illo aspernatur eius cumque.";
+                } else {
+                    setTimeout(() => { inputField.value = ""; }, 700);
+                    response.innerHTML = "Access Denied";
+                }
+            }
+        }
+        
+
+
+        function clear1() {
+            var inputField = document.getElementById("inputField");
+            inputField.value = "";
+        }
+
+    </script>
+</body>
+>>>>>>> 04fd08906cb768aa10c6b4926eb9317881ada576
 </html>
