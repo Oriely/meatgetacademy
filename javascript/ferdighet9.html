@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <style>
+        .round {
+            border: 1px solid gray;
+            border-radius: 5px;
+        }
+        #bla {
+            width:100px;
+            height:100px;
+            background:black;
+        }
+
+        .test {
+            background:green;
+        }
+    </style>
+</head>
+<body>
+    <div id="bla">Bla bla bla</div>
+
+    <input id="chk" type="checkbox" onchange="toggleStyle(this)" />
+    <input id="chk" type="checkbox" onchange="toggleStyle(this)" />
+    <input id="chk" type="checkbox" onchange="toggleStyle(this)" />
+    <input id="chk" type="checkbox" onchange="toggleStyle(this)" />
+
+    <script>
+        function toggleStyle(elem) {
+            let isChecked = elem.checked;
+
+            if(isChecked) {
+                elem.classList.toggle('.test')
+
+            }
+        }
+    </script>
+</body>
+</html>
